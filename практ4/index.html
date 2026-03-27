@@ -1,1 +1,31 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Практична №4</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Демонстрація debounce і throttle</h1>
 
+    <div class="card">
+      <h2>Debounce на полі введення</h2>
+      <input id="searchInput" type="text" placeholder="Почніть вводити..." />
+      <p>Останній стабільний ввід: <span id="searchOutput">-</span></p>
+    </div>
+
+    <div class="card">
+      <h2>Throttle на scroll</h2>
+      <p>Поточна позиція прокрутки: <span id="scrollOutput">0</span></p>
+    </div>
+
+    <div class="scroll-box">
+      Прокрутіть сторінку вниз для перевірки throttle.
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
