@@ -36,8 +36,6 @@ input {
 
 .scroll-box {
   height: 1800px;
-  background: white;
-  border: 1px solid #ccc;
   padding: 20px;
   border-radius: 10px;
 }
