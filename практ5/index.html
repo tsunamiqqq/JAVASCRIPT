@@ -1,1 +1,75 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Каталог товарів</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Каталог товарів</h1>
 
+    <div class="grid">
+      <div class="card">
+        <h2>Додати / Оновити товар</h2>
+
+        <label for="productId">ID (для оновлення або видалення)</label>
+        <input type="number" id="productId" placeholder="Наприклад: 1" />
+
+        <label for="name">Назва</label>
+        <input type="text" id="name" placeholder="Назва товару" />
+
+        <label for="price">Ціна</label>
+        <input type="number" id="price" placeholder="Ціна" />
+
+        <label for="category">Категорія</label>
+        <input type="text" id="category" placeholder="Категорія" />
+
+        <label for="stock">Кількість на складі</label>
+        <input type="number" id="stock" placeholder="Кількість" />
+
+        <label for="description">Опис</label>
+        <textarea id="description" placeholder="Опис товару"></textarea>
+
+        <button onclick="addProduct()">Додати товар</button>
+        <button onclick="updateProduct()" class="secondary">Оновити товар</button>
+        <button onclick="removeProduct()" class="danger">Видалити товар</button>
+      </div>
+
+      <div class="card">
+        <h2>Пошук та аналітика</h2>
+
+        <label for="searchCategory">Знайти за категорією</label>
+        <input type="text" id="searchCategory" placeholder="Введи категорію" />
+        <button onclick="findByCategory()">Пошук за категорією</button>
+
+        <label for="searchText">Пошук за назвою та описом</label>
+        <input type="text" id="searchText" placeholder="Введи текст" />
+        <button onclick="searchByText()">Пошук за назвою та описом</button>
+
+        <label for="minPrice">Дорожчі за ціну</label>
+        <input type="number" id="minPrice" placeholder="Введи мінімальну ціну" />
+        <button onclick="findExpensive()">Показати дорожчі</button>
+
+        <button onclick="showTotalValue()">Сумарна вартість каталогу</button>
+        <button onclick="showCategories()">Список всіх категорій</button>
+        <button onclick="showCategoryStats()">Статистика по категоріях</button>
+        <button onclick="showAllProducts()">Показати всі товари</button>
+      </div>
+
+      <div class="card full">
+        <h2>Результат</h2>
+        <div id="result" class="result">Тут буде результат...</div>
+      </div>
+
+      <div class="card full">
+        <h2>Таблиця товарів</h2>
+        <div id="tableContainer"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
